@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="./ut.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .container label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+        .container input[type="text"], 
+        .container input[type="email"], 
+        .container input[type="password"], 
+        .container input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .container input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .container input[type="submit"]:hover {
+            background-color: #218838;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-logo">
+            <a href="" class="item">
+                <img src="./assets/img/IMG_0125.JPG" 
+                alt=""
+                width="40px"
+                height="40px"/>
+            </a>
+        </div>
+        
+        <div class="nav-items">
+            <ul>
+                <li><a href="" class="item">Home</a></li>
+                <li><a href="" class="item">About Us</a></li>
+                <li><a href="" class="item">Courses</a></li>
+
+                <li class="drop-down">
+                    <a href="" class="item">Pages</a>
+                    <ul class="drop-box">
+                        <li><a href="" class="item">123</a></li>
+
+                        <!-- drop-down 2 -->
+                         <li class="drop-down-2">
+                            <a href="" class="item">LMN</a>
+                            <ul class="drop-box-2">
+                                <a href="" class="item">abc</a>
+                                <a href="" class="item">abc</a>
+                                <a href="" class="item">abc</a>
+                            </ul>
+                        </li>
+
+                        <!-- drop-down-2 -->
+                        <li><a href="" class="item">xyz</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="" class="item">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <br>
+
+
+    <div class="container">
+        <h2>Registration Form</h2>
+        <form action="/submit_registration" method="POST" name="myForm" onsubmit="return formValidation()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <p id="nmessage"></p>
+
+            <label for="pname">Phone number:</label>
+            <input type="text" id="pnumber" name="pnumber" required>
+            <p id="pmessage"></p>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <p id="emessage"></p>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+    
+
+            <i
+            class="fa fa-eye"
+            aria-hidden="true"
+            id="show"
+            onclick="seePassword()"
+            ></i>
+
+            <p id="pmessage"></p>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+            <p id="dmessage"></p>
+
+            <input type="submit" value="Register">
+        </form>
+    </div>
+
+    <script>
+        function setPassword(){
+            var Z = document.getElementById("password");
+            if(z.type == "password"){
+                z.type = "text";
+            } else {
+                z.type = "password";
+            }
+        }
+
+        function formValidation(){
+            if (document.myForm.phone.value == ""){
+                document.getElementById("nmessage").innerHTML = "Name is requird";
+                return false;
+            }
+
+            if (document.myForm.phone.value == ""){
+                document.getElementById("pmessage").innerHTML = "Phone number is requird";
+                return false;
+            }
+
+            if
+
+            if (document.myForm.phone.value == ""){
+                document.getElementById("emessage").innerHTML = "Email is requird";
+                return false;
+            }
+
+            if (document.myForm.phone.value == ""){
+                document.getElementById("pmessage").innerHTML = "Password is requird";
+                return false;
+            }
+
+            if (document.myForm.phone.value == ""){
+                document.getElementById("dmessage").innerHTML = "Date of Birth is requird";
+                return false;
+            }
+
+        }
+    </script>
+</body>
+</html>

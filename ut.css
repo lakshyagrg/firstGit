@@ -1,0 +1,309 @@
+
+/* Nav bar ko code  */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: aquamarine;
+}
+
+.nav-logo img{
+    padding: 4px;
+}
+
+.nav-items ul {
+    list-style: none;
+}
+
+.nav-items ul li{
+    display: inline-block;
+}
+
+.nav-items ul .item{
+    color: black;
+    text-decoration: none;
+    padding: 1rem;
+    display: inline-block;
+}
+
+.nav-items ul .item:hover{
+    background-color: rgba(0, 140, 255, 0.341);
+}
+
+.drop-down{
+    position: relative;
+}
+
+.drop-box{
+    position: absolute;
+    background-color: aquamarine;
+    display: none;
+    right: 0;
+}
+
+.drop-down:hover .drop-box{
+    display: block;
+}
+
+.drop-box .item{
+    min-width: 120px;
+}
+
+.drop-box-2{
+    position: absolute;
+    right: 100%;
+    top: 33.33%;
+    background-color: aquamarine;
+    display: none;
+}
+
+.drop-down-2:hover .drop-box-2{
+    display: block;
+}
+
+@media screen and (max-width: 600px){
+    nav{
+        display: block;
+    }
+
+    .nav-items li,
+    .nav-items .item{
+        display:block  !important;
+        text-align: center;
+    }
+
+    .drop-down{
+        overflow: hidden;
+    }
+
+    .drop-box{
+        position: relative;
+        left: 0;
+    }
+
+    .drop-box-2{
+        position: static;
+    }
+}
+
+
+/* animatioin code  */
+.cube{
+    width: 400px;
+    height: 200px;
+    background-color: blue;
+    margin: 1rem;
+    transition: 1ms ease-in;
+}
+
+.button{
+    background-color: aliceblue;
+    padding: 1rem;
+    display: inline-block;
+    margin: 1rem;
+    border-radius: 12px;
+    transition: 0.5s ease-in;
+}
+
+.cube:hover{
+    transform: rotate(100deg);
+}
+
+.button:hover{
+    /* translate ley up down gardincha */
+    /* transform: translate(0, 10px); */
+
+    /* scale ley zoom in gardincha  */
+    /* transform: scale(1.3, 1.5); */
+
+    /* skew ley twist gardincha */
+    transform: skew(10deg, 20deg);
+}
+
+
+/* this ani code and keyframes makes our animation rotate  */
+.ani{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    animation-name: example;
+    animation-duration: 4s;
+  }
+  
+  @keyframes example {
+    0% { 
+        background-color:red; 
+        left:0px; 
+        top:0px; 
+    }
+
+    25%  { 
+        background-color:yellow; 
+        left:200px; 
+        top:0px; 
+    }
+
+    50%  { 
+        background-color:blue; 
+        left:200px; 
+        top:200px; 
+    }
+
+    75%  { 
+        background-color:green; 
+        left:0px; 
+        top:200px; 
+    }
+
+    100% {
+        background-color:red; 
+        left:0px; 
+        top:0px; 
+    }
+  }
+  
+
+#loading{
+    background-image: url("assets/img/IMG_0125.JPG");
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-size: 100% 100vh;
+    background-repeat: no-repeat;
+}
+
+
+/* position ko css */
+/* * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+} */
+/* 
+.linear {
+    background-image:
+    linear-gradient(blue,rgba(255,0,0,1))
+}
+
+.radial{
+    background-image: 
+    /* repeating-radial-gradient(circle,black,yellow) */
+    /* radial-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.6)),
+    url("assets/img/IMG_0125.JPG");
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+} */
+
+/* .grad {
+    height: 50vh;
+}
+
+.conic{
+    background-image: 
+    repeating-conic-gradient(black 10%, yellow 30%);
+    border-radius: 100%;
+} */ 
+/* 
+.spacing{
+    border: solid;
+    padding: 1rem 2rem 3rem 4rem;
+    margin: 4rem;
+}
+
+.container{
+    background-color: rgb(23, 255, 116);
+    margin: 10rem;
+    padding: 10rem;
+}
+
+.box{
+    height: 200px;
+    margin: 1rem 0;
+}
+
+.container .box:nth-child(even){
+    background-color: aqua;
+}
+
+.container .box:nth-child(odd){
+    background-color: red;
+}
+
+.box-1{
+    position: relative;
+    left: 10px;
+    bottom: 20px;
+}
+
+.box-2{
+    position: absolute;
+    width: 200px;
+    right: 2px;
+    top: 1px;
+}
+
+.box-3{
+    position: fixed;
+    width: 200px;
+    left: 0;
+    bottom: 0;
+}
+
+.box-4{
+    position: sticky;
+    top: 0;
+} */
+
+
+/* Box  ko code */
+/* *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.main{
+    padding: 10rem;
+    margin: 10rem;
+    border: 5px solid black;
+    background-color: bisque;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    /* for horizontal we use justify content  */
+    /* justify-content: center; */
+    /* for horizontal we use align items  */
+    /* align-items: center; */
+    /* align-content: space-evenly; */
+    /* gap: 1rem;
+}
+
+.sec{
+    height: 100px;
+    width: 400px;
+    /* flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 250px; */
+
+    /* short-form of flex grow,shrink,basis */
+    /* flex: 1 1 250px; */
+/* } */
+
+/* .sec:nth-child(odd){ */
+    /* background-color: aqua; */
+    /* height: 50px !important; */
+
+/* } */
+
+/* .sec:nth-child(even){ */
+    /* background-color: rgb(43, 255, 0); */
+    /* height: 50px !important; */
+/* }  */
+
+

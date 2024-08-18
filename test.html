@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        video {
+          width: 300px;
+          height: 300px;
+          border: solid;
+        }
+      </style>
+  
+    <link rel="stylesheet" href="./ut.css">
+</head>
+
+<body onload="onload()">
+    <div id="loading">
+       <button onclick="newDate()"> click me </button> 
+       <p id="jscss" onmousedown="onmouse()" onmouseout="onmouseout()">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed numquam error voluptatum vel aliquam praesentium ad exercitationem ducimus perferendis, eaque harum magnam, dolore, dolorem ex veritatis ut porro quod accusamus.</p>
+       <button id="onmousedown" onmousedown="onMouseDown()">Submit</button>
+       <form action="">
+        <input class="form-control" id="amt" name="vote" style="width: 200px" onchange="onChange1()"
+        placeholder="Enter number of vote">
+        <span id="total">0
+        <p id="price"></p>
+        </span>
+       </form>
+       <script src="script.js"></script>
+    </div>
+
+    
+    <!-- color grading example
+    <div class="linear grad">
+        
+    </div>
+    <div class="radial grad">
+        
+    </div>
+    <div class="conic grad">
+        
+    </div> -->
+    
+    <!-- position ko html -->
+    <!-- <a href="" class="spacing">test</a>
+    <br>
+    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, laborum laudantium? Ut repellat odio illo labore nisi et molestias, nulla officia repellendus reiciendis rerum. Laudantium eaque modi illum! Pariatur, dolore!</span>
+
+    <div class="container">
+        <div class="box box-1">1</div>
+        <div class="box box-2">2</div>
+        <div class="box box-3">3</div>
+        <div class="box box-4">4</div>
+    </div>
+     -->
+
+
+
+    <!-- box -->
+    <!-- <div class="main">
+        <div class="sec sec-1"></div>
+        <div class="sec sec-2"></div>
+        <div class="sec sec-3"></div>
+        <div class="sec sec-4"></div>
+        <div class="sec sec-5"></div>
+        <div class="sec sec-6"></div>
+        <div class="sec sec-7"></div>
+        <div class="sec sec-8"></div>
+        <div class="sec sec-9"></div>
+        <div class="sec sec-10"></div>
+    </div> -->
+
+
+    <!-- Nav bar code  -->
+    <nav>
+        <div class="nav-logo">
+            <a href="" class="item">
+                <img src="./assets/img/IMG_0125.JPG" 
+                alt=""
+                width="40px"
+                height="40px"/>
+            </a>
+        </div>
+        
+        <div class="nav-items">
+            <ul>
+                <li><a href="" class="item">Home</a></li>
+                <li><a href="" class="item">About Us</a></li>
+                <li><a href="" class="item">Courses</a></li>
+
+                <li class="drop-down">
+                    <a href="" class="item">Pages</a>
+                    <ul class="drop-box">
+                        <li><a href="" class="item">123</a></li>
+
+                        <!-- drop-down 2 -->
+                         <li class="drop-down-2">
+                            <a href="" class="item">LMN</a>
+                            <ul class="drop-box-2">
+                                <a href="" class="item">abc</a>
+                                <a href="" class="item">abc</a>
+                                <a href="" class="item">abc</a>
+                            </ul>
+                        </li>
+
+                        <!-- drop-down-2 -->
+                        <li><a href="" class="item">xyz</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="" class="item">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- animation code  -->
+     <div class="cube">okok</div>
+     <a href="" class="button">noice</a>
+     <div class ="ani"></div>
+
+     <br>
+     
+     <h1 id="jstest"></h1>
+     <script src="script.js"></script>
+
+     <p class="new">Hello</p>
+     <p class="new">Josh!</p>
+     <p class="new">I'm from pokhara.</p>
+
+     <div class="box">
+        <video src="" id="video" autoplay></video>
+        <button onclick="opencamera()">Open camera</button>
+        <button onclick="closecamera()">Close camera</button>
+      </div>
+      
+
+      <!-- Camera ko code  -->
+      <script>
+        let stream;
+  
+        async function opencamera() {
+          stream = await navigator.mediaDevices.getUserMedia({ video: true });
+          document.getElementById("video").srcObject = stream;
+        }
+  
+        function closecamera() {
+          if (stream) {
+            const tracks = stream.getTracks();
+            tracks.forEach((track) => track.stop());
+            document.getElementById("video").srcObject = null;
+          }
+        }
+      </script>
+  
+</body>
+</html>

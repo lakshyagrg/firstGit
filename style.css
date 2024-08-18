@@ -1,0 +1,47 @@
+h1{
+    color: blue;
+    font-size: 1rem;
+    font-weight: bold;
+    
+}
+
+/* body{
+    background-color: brown;
+} */
+
+a{
+    color: aquamarine;
+}
+
+/* class selector */
+.paragraph{
+    text-align: center;
+}
+
+/* id selector */
+#header{
+    text-decoration: dashed;
+    color: yellow;
+}
+
+*{
+    margin: 10px;
+    box-sizing: content-box;
+}
+
+.container{
+    color: rgba(235, 16, 16, 0.992);
+    height: 100pc;
+    background-color: black;
+    background-image: url('assets/img/IMG_0125.JPG');
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    
+    /* to allign images at fixed point we use attachment */
+    background-attachment: fixed;
+    color: hsl(hue, saturation, lightness);
+}
+
+.linear{
+    background-image: 
+    linear-gradient(red,green,blue);
+}

@@ -1,0 +1,115 @@
+<!-- Responsive Nav Bar -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assests/css/">
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+
+        nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: beige;
+
+        }
+
+        nav ul{
+            list-style: none;
+
+        }
+
+        nav ul li{
+            display: inline-block;
+        }
+
+        nav ul li a{
+            display: inline-block;
+            color: black;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        nav ul li:last-child{
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: none;
+        }
+
+        nav ul li :hover{
+            background-color: gray;
+
+        }
+
+        @media screen and (max-width:600px) {
+            nav{
+                display: block!important;
+            }
+
+            nav ul li:last-child{
+                display: block;
+            }
+
+            nav ul li:not(:last-child){
+                display: none;
+            }
+
+            nav .respo ul li,
+            nav .respo ul li a{
+                display: block !important;
+                text-align: center;
+            }
+            
+        }
+
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="left">
+            <a href=""><img src="assets/img/IMG_0125.JPG" alt="" width="50px" height="50px"></a>
+
+
+        </div>
+
+
+
+        <div class="right" id="toggleNav">
+
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Pages</a></li>
+                <li><a href="">Contact Us</a></li>
+                <li><a href="" onclick="navToggle(event)">&#9776;</a></li>
+
+
+            </ul>
+            <!-- (li>a)*6 -->
+            
+
+
+        </div>
+
+    </nav>
+
+    <script>
+        function navToggle(event){
+            event.preventDefault();
+            var x = document.getElementById("toggleNav");
+            x.classList.toggle("respo");
+        }
+    </script>
+
+</body>
+</html>
